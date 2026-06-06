@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Interview Prep — Mukesh Kumar Patel</title>
+  <meta name="description" content="193 technical and behavioral interview Q&A — Java, Kotlin, Android, DSA, Architecture, and HR/Infosys prep with English and Hindi answers.">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/48297190?v=4" type="image/png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6ee7b7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/interview.css">
+</head>
+<body class="interview-page">
+  <div class="bg-mesh" aria-hidden="true"></div>
+
+  <header class="site-header scrolled" id="header">
+    <nav class="nav container" aria-label="Interview prep">
+      <a href="index.html" class="nav-logo">MK<span class="accent">.</span></a>
+      <a href="index.html" class="btn btn-outline btn-sm nav-back">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        <span class="nav-back-long">Back to Portfolio</span>
+        <span class="nav-back-short">Back</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="interview-page-main">
+    <div class="container">
+      <div class="interview-bottom-header reveal visible">
+        <span class="section-tag">Interview Prep</span>
+        <h1>Java, Kotlin, Android & Architecture Q&A</h1>
+        <p class="section-desc">193 in-depth questions — technical + <strong>Behavioral &amp; HR</strong> (Infosys mock), <strong>What → Why → How</strong> cards, visuals, and <strong>text-to-speech</strong> in English or Hindi.</p>
+      </div>
+
+            <!-- ═══════════════════════════════════════════════════
+           STUDY PLAN FLOWCHART + DECISION TREE
+           ═══════════════════════════════════════════════════ -->
+      <section class="spf-section reveal visible" id="studyPlanFlowchart" aria-label="Study roadmap">
+
+        <div class="spf-header-row">
+          <span class="section-tag">Study Roadmap</span>
+          <h2 class="spf-title"><i class="fa-solid fa-route"></i> Your Interview Study Plan</h2>
+          <p class="spf-subtitle" id="spfPlanDesc">Interview within a week — high-impact topics with daily checkpoints</p>
+        </div>
+
+        <div class="spf-howto" aria-label="How to use the study roadmap">
+          <div class="spf-howto-step">
+            <span class="spf-howto-num">1</span>
+            <p><strong>Pick a plan</strong> below that matches your timeline.</p>
+          </div>
+          <div class="spf-howto-step">
+            <span class="spf-howto-num">2</span>
+            <p><strong>Open each stage</strong>, follow the tasks, then mark complete.</p>
+          </div>
+          <div class="spf-howto-step">
+            <span class="spf-howto-num">3</span>
+            <p><strong>Pass checkpoints</strong> before moving on — use the Q&amp;A tabs above the list.</p>
+          </div>
+        </div>
+
+        <!-- Plan tab switcher -->
+        <div class="spf-tabs" role="tablist" aria-label="Study plan duration">
+          <button class="spf-tab-btn active" data-plan="5day" role="tab" aria-selected="true">
+            <i class="fa-solid fa-bolt"></i>
+            <span class="spf-tab-text">
+              <span class="spf-tab-label">5 Days</span>
+              <span class="spf-tab-hint">Crash · interview this week</span>
+            </span>
+          </button>
+          <button class="spf-tab-btn" data-plan="1month" role="tab" aria-selected="false">
+            <i class="fa-solid fa-calendar"></i>
+            <span class="spf-tab-text">
+              <span class="spf-tab-label">1 Month</span>
+              <span class="spf-tab-hint">All topics · 3 mocks</span>
+            </span>
+          </button>
+          <button class="spf-tab-btn" data-plan="3month" role="tab" aria-selected="false">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span class="spf-tab-text">
+              <span class="spf-tab-label">3 Months</span>
+              <span class="spf-tab-hint">Deep mastery · senior prep</span>
+            </span>
+          </button>
+          <button class="spf-tab-btn spf-tab-btn--working" data-plan="working" role="tab" aria-selected="false">
+            <i class="fa-solid fa-briefcase"></i>
+            <span class="spf-tab-text">
+              <span class="spf-tab-label">Working Pro</span>
+              <span class="spf-tab-hint">45–60 min · evenings only</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="spf-plan-meta" id="spfPlanMeta" aria-live="polite">
+          <span class="spf-meta-item" id="spfMetaTime"><i class="fa-regular fa-clock"></i> 3–4 hrs/day</span>
+          <span class="spf-meta-item" id="spfMetaFor"><i class="fa-solid fa-bullseye"></i> Interview in ≤ 7 days</span>
+        </div>
+
+        <!-- Progress bar -->
+        <div class="spf-progress-row">
+          <div class="spf-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-labelledby="spfProgressLabel">
+            <div class="spf-progress-fill" id="spfProgressFill"></div>
+          </div>
+          <span class="spf-progress-label" id="spfProgressLabel">0 of 0 stages done</span>
+          <button class="spf-reset-btn" id="spfResetBtn" type="button" title="Reset progress for this plan" aria-label="Reset progress for this plan">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+        </div>
+
+        <!-- Roadmap stages (rendered by JS) -->
+        <div class="spf-flowchart" id="spfFlowchart" aria-live="polite"></div>
+
+        <!-- Daily loop -->
+        <div class="spf-daily-wrap">
+          <p class="spf-daily-title"><i class="fa-solid fa-repeat"></i> Daily routine — repeat every study day</p>
+          <p class="spf-daily-desc" id="spfDailyDesc">Same rhythm each day while you follow the stages above.</p>
+          <div class="spf-daily-loop" id="spfDailyLoop"></div>
+        </div>
+
+      </section>
+      <!-- ═══════════════════════════════════════════════════ -->
+
+
+      <div class="interview-toolbar reveal visible">
+        <div class="interview-search-wrap">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" id="interviewSearch" class="interview-search" placeholder="Search questions…" autocomplete="off" aria-label="Search interview questions">
+        </div>
+        <div class="interview-actions">
+          <button type="button" class="btn btn-outline btn-sm" id="interviewExpandAll">Expand all</button>
+          <button type="button" class="btn btn-outline btn-sm" id="interviewCollapseAll">Collapse all</button>
+        </div>
+      </div>
+
+      <p class="interview-mobile-hint" id="interviewMobileHint" hidden>
+        <i class="fa-solid fa-mobile-screen"></i>
+        <span id="interviewMobileHintText"></span>
+      </p>
+
+      <p class="interview-tts-warn" id="interviewTtsWarn" hidden>
+        <i class="fa-solid fa-triangle-exclamation"></i> Text-to-speech is not available in this browser. On Windows, install <strong>English (India)</strong> and <strong>Hindi</strong> voices under Settings → Time &amp; language → Speech.
+      </p>
+
+      <div class="interview-tts-toolbar reveal visible" id="interviewTtsToolbar">
+        <span class="interview-tts-toolbar-title">
+          <i class="fa-solid fa-headphones" aria-hidden="true"></i> Text to speech
+        </span>
+        <span class="interview-tts-hint" title="Windows: Settings → Time &amp; language → Speech — install English (India) Neerja and Hindi Madhur for natural Indian tone.">Recommended: Indian English or Hindi voices for clearest TTS.</span>
+        <div class="interview-tts-controls">
+          <div class="interview-tts-rate-wrap">
+            <label for="interviewTtsVoiceEn">English voice</label>
+            <select id="interviewTtsVoiceEn" class="interview-tts-voice" aria-label="Indian English voice">
+              <option value="auto">Auto — Indian English</option>
+            </select>
+          </div>
+          <div class="interview-tts-rate-wrap">
+            <label for="interviewTtsVoiceHi">Hindi voice</label>
+            <select id="interviewTtsVoiceHi" class="interview-tts-voice" aria-label="Hindi India voice">
+              <option value="auto">Auto — Hindi (India)</option>
+            </select>
+          </div>
+          <div class="interview-tts-rate-wrap">
+            <label for="interviewTtsRate">Speed</label>
+            <select id="interviewTtsRate" class="interview-tts-rate" aria-label="Speech speed">
+              <option value="0.85">0.85×</option>
+              <option value="0.95" selected>0.95×</option>
+              <option value="1">1×</option>
+              <option value="1.1">1.1×</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="interview-tabs-wrap reveal visible">
+        <div class="interview-tabs" id="interviewTabs" role="tablist" aria-label="Question categories"></div>
+        <p class="interview-count" id="interviewCount" aria-live="polite"></p>
+      </div>
+
+      <div class="interview-prep-note reveal visible">
+        <div class="prep-card">
+          <i class="fa-solid fa-lightbulb"></i>
+          <div>
+            <strong>How to read</strong>
+            <p>Open a question and follow <strong>What → Why → How</strong> in English or Hindi. Use <strong>Listen</strong> on a card for text-to-speech, or search and category tabs to focus one topic at a time.</p>
+          </div>
+        </div>
+        <div class="prep-card">
+          <i class="fa-solid fa-calendar-check"></i>
+          <div>
+            <strong>7-day plan</strong>
+            <p>Days 1–2: Java + Kotlin · Days 3–4: Android · Day 5: DSA · Day 6: Architecture · Day 7: <strong>Behavioral &amp; HR</strong> tab + mock aloud.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="interviewList" class="interview-list reveal visible" aria-label="Interview questions and answers"></div>
+    </div>
+  </main>
+
+  <!-- Mobile: real audio stream for background + lock screen (JioSaavn-style) -->
+  <audio
+    id="interviewPlayerMusic"
+    playsinline
+    webkit-playsinline
+    preload="none"
+    hidden
+    aria-hidden="true"
+  ></audio>
+  <!-- Desktop fallback: silent loop while Web Speech runs -->
+  <audio
+    id="interviewPlayerKeepalive"
+    loop
+    playsinline
+    webkit-playsinline
+    preload="none"
+    hidden
+    aria-hidden="true"
+  ></audio>
+
+  <div class="interview-player" id="interviewPlayer" hidden aria-label="Interview audio player">
+    <div class="interview-player-inner">
+      <div class="interview-player-info">
+        <p class="interview-player-title" id="interviewPlayerTitle">—</p>
+        <p class="interview-player-meta">
+          <span id="interviewPlayerPart">English</span>
+          <span class="interview-player-sep">·</span>
+          <span id="interviewPlayerIndex">0 / 0</span>
+        </p>
+      </div>
+      <div class="interview-player-controls" role="group" aria-label="Playback controls">
+        <button type="button" class="interview-player-btn" id="interviewPlayerPrev" title="Previous" aria-label="Previous">
+          <i class="fa-solid fa-backward-step" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="interview-player-btn interview-player-btn-main" id="interviewPlayerPlayPause" title="Play / Pause" aria-label="Play">
+          <i class="fa-solid fa-play" id="interviewPlayerPlayPauseIcon" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="interview-player-btn" id="interviewPlayerStop" title="Stop" aria-label="Stop">
+          <i class="fa-solid fa-stop" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="interview-player-btn" id="interviewPlayerNext" title="Next" aria-label="Next">
+          <i class="fa-solid fa-forward-step" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p><a href="index.html">← Portfolio</a> · &copy; <span id="year"></span> Mukesh Kumar Patel</p>
+      <a href="index.html" class="btn btn-outline btn-sm">
+        <i class="fa-solid fa-house"></i> Home
+      </a>
+    </div>
+  </footer>
+
+  <!-- Optional: deploy cloudflare-worker/tts-proxy.js then set your Workers URL here -->
+  <script>
+    window.INTERVIEW_TTS_PROXY = "";
+  </script>
+  <script src="js/interview-data.js" defer></script>
+  <script src="js/wwh-structure.js" defer></script>
+  <script src="js/interview-visuals.js" defer></script>
+  <script src="js/interview-answer-format.js" defer></script>
+  <script src="js/interview-music-audio.js" defer></script>
+  <script src="js/interview-tts.js" defer></script>
+  <script src="js/interview.js" defer></script>
+  <script src="js/study-plan.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
