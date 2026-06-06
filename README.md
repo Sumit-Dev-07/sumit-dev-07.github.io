@@ -1,4 +1,4 @@
-# Mukesh Kumar Patel — Portfolio
+# Sumit Ojha — Portfolio
 
 Modern single-page portfolio for a Mobile App Developer (Android & Flutter), hosted on GitHub Pages.
 
@@ -35,8 +35,8 @@ npx serve .
 
 ## CV
 
-Place your resume PDF at `assets/Mukesh-Kumar-Patel-CV.pdf` for the download button to work.
+Place your resume PDF at `assets/Sumit-Ojha-CV.pdf` for the download button to work.
 
 ## Deploy
 
-Push to the `master` branch of `mukeshkumar7470.github.io` — GitHub Pages serves the site automatically.
+Push to the `main` branch of `sumit-dev-07.github.io` — GitHub Pages serves the site automatically.
