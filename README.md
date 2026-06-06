@@ -2,7 +2,7 @@
 
 Modern single-page portfolio for a Mobile App Developer (Android & Flutter), hosted on GitHub Pages.
 
-**Live site:** [https://mukeshkumar7470.github.io/](https://mukeshkumar7470.github.io/)
+**Live site:** [https://sumit-dev-07.github.io/](https://sumit-dev-07.github.io/)
 
 ## Features
 
