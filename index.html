@@ -3,400 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sumit Ojha — Mobile App Developer</title>
-  <meta name="description" content="Mobile App Developer with 5+ years building production Android & Flutter apps. 50,000+ downloads, Kotlin, Dart, Jetpack Compose, MVVM.">
-  <meta name="keywords" content="Sumit Ojha, Android Developer, Flutter Developer, Kotlin, Mobile App Developer, Indore, Sumit-Dev-07">
-  <link rel="canonical" href="https://sumit-dev-07.github.io/">
-  <meta property="og:title" content="Sumit Ojha — Mobile App Developer">
+  <title>Mukesh Kumar Patel — Mobile App Developer</title>
+  <meta name="description" content="Mobile App Developer with 4.5+ years building production Android & Flutter apps. 50,000+ downloads, Kotlin, Dart, Jetpack Compose, MVVM.">
+  <meta name="keywords" content="Mukesh Kumar Patel, Android Developer, Flutter Developer, Kotlin, Mobile App Developer, Bhopal, mukeshkumar7470">
+  <link rel="canonical" href="https://mukeshkumar7470.github.io/">
+  <meta property="og:title" content="Mukesh Kumar Patel — Mobile App Developer">
   <meta property="og:description" content="Production-grade Android & Flutter apps. 50K+ downloads.">
-  <meta property="og:url" content="https://sumit-dev-07.github.io/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/48297190?v=4">
+  <meta property="og:url" content="https://mukeshkumar7470.github.io/">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/48297190?v=4" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #0a0a0f;
-      --bg2: #10101a;
-      --bg3: #16162a;
-      --accent: #7c6dfa;
-      --accent2: #c084fc;
-      --accent3: #38bdf8;
-      --text: #e8e8f0;
-      --text2: #9898b8;
-      --border: rgba(124,109,250,0.18);
-      --card-bg: rgba(16,16,26,0.85);
-      --radius: 16px;
-      --radius-sm: 8px;
-      --font-display: 'Syne', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
-      --font-mono: 'DM Mono', monospace;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    /* BG */
-    .bg-noise {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      opacity: 0.5;
-    }
-    .bg-grid {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: linear-gradient(rgba(124,109,250,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(124,109,250,0.05) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-    .bg-orb {
-      position: fixed; border-radius: 50%; filter: blur(120px); pointer-events: none; z-index: 0;
-    }
-    .orb1 { width: 600px; height: 600px; top: -200px; right: -100px; background: radial-gradient(circle, rgba(124,109,250,0.12), transparent 70%); }
-    .orb2 { width: 500px; height: 500px; bottom: 200px; left: -150px; background: radial-gradient(circle, rgba(56,189,248,0.08), transparent 70%); }
-
-    /* Layout */
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
-
-    /* Nav */
-    .site-header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(10,10,15,0.8); backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      transition: all 0.3s;
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .nav-logo {
-      font-family: var(--font-display); font-size: 1.4rem; font-weight: 800;
-      color: var(--text); text-decoration: none; letter-spacing: -0.5px;
-    }
-    .nav-logo .accent { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: var(--text2); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; letter-spacing: 0.3px; }
-    .nav-links a:hover { color: var(--text); }
-    .nav-cta {
-      background: var(--accent) !important; color: #fff !important;
-      padding: 8px 20px; border-radius: 100px; font-size: 0.85rem !important;
-    }
-    .nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-    .nav-toggle span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: all 0.3s; display: block; }
-
-    /* Hero */
-    .hero {
-      min-height: 100vh; display: flex; align-items: center;
-      padding-top: 80px; gap: 60px;
-    }
-    .hero-content { flex: 1; max-width: 600px; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(124,109,250,0.1); border: 1px solid var(--border);
-      padding: 6px 16px; border-radius: 100px; font-size: 0.82rem;
-      color: var(--accent); margin-bottom: 24px; font-family: var(--font-mono);
-    }
-    .pulse {
-      width: 8px; height: 8px; background: #4ade80; border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
-
-    .hero-title {
-      font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 800; line-height: 1.1; margin-bottom: 16px; letter-spacing: -1px;
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-role {
-      font-family: var(--font-mono); font-size: 1.1rem; color: var(--accent3);
-      margin-bottom: 20px; height: 1.6rem;
-    }
-    .typed-cursor { animation: blink 1s infinite; }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
-    .hero-summary { color: var(--text2); font-size: 1rem; margin-bottom: 32px; max-width: 520px; }
-    .hero-summary strong { color: var(--text); }
-
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
-
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 28px; border-radius: 100px; font-weight: 600;
-      font-size: 0.9rem; text-decoration: none; transition: all 0.25s; cursor: pointer;
-      font-family: var(--font-body); border: none;
-    }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,109,250,0.35); }
-    .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-    .btn-lg { padding: 14px 36px; font-size: 1rem; }
-
-    .hero-social { display: flex; gap: 16px; }
-    .hero-social a {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--bg3); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text2); text-decoration: none; transition: all 0.2s; font-size: 0.9rem;
-    }
-    .hero-social a:hover { color: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
-
-    .hero-visual { flex: 0 0 320px; position: relative; display: flex; align-items: center; justify-content: center; }
-    .profile-ring {
-      width: 280px; height: 280px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
-      padding: 3px; position: relative; z-index: 1;
-    }
-    .profile-img {
-      width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
-      background: var(--bg2);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .profile-placeholder {
-      width: 100%; height: 100%; border-radius: 50%; background: var(--bg2);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display); font-size: 4rem; font-weight: 800;
-      background: linear-gradient(135deg, var(--bg2), var(--bg3));
-      color: var(--accent);
-    }
-    .floating-card {
-      position: absolute; background: var(--card-bg);
-      border: 1px solid var(--border); border-radius: var(--radius-sm);
-      padding: 10px 16px; display: flex; align-items: center; gap: 8px;
-      font-size: 0.82rem; font-weight: 600; font-family: var(--font-mono);
-      backdrop-filter: blur(12px); color: var(--text);
-    }
-    .floating-card i { color: var(--accent); font-size: 1rem; }
-    .card-1 { top: 20px; right: -20px; animation: float 3s ease-in-out infinite; }
-    .card-2 { bottom: 60px; right: -30px; animation: float 3s ease-in-out infinite 1s; }
-    .card-3 { bottom: 20px; left: -10px; animation: float 3s ease-in-out infinite 2s; }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-
-    /* Stats */
-    .stats {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
-      padding: 60px 0;
-    }
-    .stat-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px 20px; text-align: center;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .stat-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-    .stat-value {
-      display: block; font-family: var(--font-display); font-size: 2.2rem;
-      font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .stat-label { display: block; color: var(--text2); font-size: 0.85rem; margin-top: 4px; }
-
-    /* Sections */
-    .section { padding: 100px 0; }
-    .section-alt { background: var(--bg2); }
-    .section-header { margin-bottom: 56px; }
-    .section-tag {
-      display: inline-block; font-family: var(--font-mono); font-size: 0.75rem;
-      color: var(--accent); background: rgba(124,109,250,0.1);
-      border: 1px solid var(--border); padding: 4px 14px; border-radius: 100px;
-      margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase;
-    }
-    .section-header h2 {
-      font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem);
-      font-weight: 800; letter-spacing: -0.5px;
-    }
-
-    /* About */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-    .about-text p { color: var(--text2); margin-bottom: 16px; }
-    .about-text strong { color: var(--text); }
-    .about-highlights { list-style: none; margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
-    .about-highlights li { display: flex; align-items: center; gap: 10px; color: var(--text2); font-size: 0.9rem; }
-    .about-highlights i { color: var(--accent); width: 16px; }
-    .about-cards { display: flex; flex-direction: column; gap: 16px; }
-    .info-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 24px; transition: border-color 0.2s, transform 0.2s;
-    }
-    .info-card:hover { border-color: var(--accent); transform: translateX(4px); }
-    .info-card i { color: var(--accent); font-size: 1.3rem; margin-bottom: 10px; display: block; }
-    .info-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
-    .info-card p { color: var(--text2); font-size: 0.88rem; }
-
-    /* Timeline */
-    .timeline { position: relative; padding-left: 40px; }
-    .timeline::before {
-      content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
-      width: 2px; background: linear-gradient(to bottom, var(--accent), transparent);
-    }
-    .timeline-item { position: relative; margin-bottom: 48px; }
-    .timeline-marker {
-      position: absolute; left: -36px; top: 6px;
-      width: 14px; height: 14px; border-radius: 50%;
-      background: var(--accent); border: 3px solid var(--bg);
-      box-shadow: 0 0 0 3px rgba(124,109,250,0.3);
-    }
-    .timeline-content {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px;
-      transition: border-color 0.2s;
-    }
-    .timeline-content:hover { border-color: var(--accent); }
-    .timeline-meta { display: flex; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
-    .timeline-date, .timeline-location {
-      font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent2);
-      background: rgba(192,132,252,0.1); padding: 3px 10px; border-radius: 100px;
-    }
-    .timeline-content h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin-bottom: 4px; }
-    .timeline-company { color: var(--accent); font-size: 0.85rem; font-weight: 600; margin-bottom: 12px; font-family: var(--font-mono); }
-    .timeline-content ul { padding-left: 18px; }
-    .timeline-content li { color: var(--text2); font-size: 0.9rem; margin-bottom: 6px; }
-
-    /* Projects */
-    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .project-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px;
-      transition: border-color 0.25s, transform 0.25s;
-      display: flex; flex-direction: column; gap: 12px;
-    }
-    .project-card:hover { border-color: var(--accent); transform: translateY(-6px); }
-    .project-icon {
-      width: 52px; height: 52px; border-radius: var(--radius-sm);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
-    }
-    .project-icon.bible { background: rgba(251,191,36,0.15); color: #fbbf24; }
-    .project-icon.health { background: rgba(52,211,153,0.15); color: #34d399; }
-    .project-icon.logistics { background: rgba(56,189,248,0.15); color: #38bdf8; }
-    .project-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-    .project-tags span {
-      background: rgba(124,109,250,0.12); color: var(--accent);
-      font-size: 0.72rem; padding: 3px 10px; border-radius: 100px;
-      font-family: var(--font-mono); border: 1px solid var(--border);
-    }
-    .project-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
-    .project-type { color: var(--accent2); font-size: 0.8rem; font-family: var(--font-mono); }
-    .project-card > p { color: var(--text2); font-size: 0.88rem; }
-    .project-features { padding-left: 16px; margin-top: 4px; }
-    .project-features li { color: var(--text2); font-size: 0.83rem; margin-bottom: 4px; }
-
-    /* Skills */
-    .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .skill-group {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 24px;
-      transition: border-color 0.2s;
-    }
-    .skill-group:hover { border-color: var(--accent); }
-    .skill-group h3 {
-      font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
-      margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
-    }
-    .skill-group h3 i { color: var(--accent); }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .skill-tags span {
-      background: rgba(255,255,255,0.05); color: var(--text2);
-      font-size: 0.78rem; padding: 4px 12px; border-radius: 100px;
-      border: 1px solid rgba(255,255,255,0.08); font-family: var(--font-mono);
-      transition: all 0.2s;
-    }
-    .skill-tags span:hover { background: rgba(124,109,250,0.15); color: var(--accent); border-color: var(--border); }
-
-    /* Achievements */
-    .achievements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .achievement-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 28px; text-align: center;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .achievement-card:hover { border-color: var(--accent); transform: translateY(-4px); }
-    .achievement-card i { font-size: 2rem; color: var(--accent); margin-bottom: 14px; display: block; }
-    .achievement-card p { color: var(--text2); font-size: 0.88rem; line-height: 1.6; }
-    .achievement-card strong { color: var(--text); }
-
-    /* Education */
-    .education-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 24px; }
-    .edu-card {
-      background: var(--card-bg); border: 1px solid var(--border);
-      border-radius: var(--radius); padding: 24px;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-    .edu-card:hover { border-color: var(--accent); transform: translateX(4px); }
-    .edu-year { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); background: rgba(124,109,250,0.1); padding: 3px 10px; border-radius: 100px; display: inline-block; margin-bottom: 10px; }
-    .edu-card h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
-    .edu-school { color: var(--text2); font-size: 0.88rem; }
-    .edu-detail { color: var(--text2); font-size: 0.8rem; font-family: var(--font-mono); margin-top: 4px; }
-    .edu-cgpa { color: var(--accent2); font-size: 0.8rem; font-family: var(--font-mono); margin-top: 4px; }
-    .languages-note { color: var(--text2); font-size: 0.88rem; display: flex; align-items: center; gap: 8px; margin-top: 8px; }
-    .languages-note i { color: var(--accent); }
-
-    /* Contact */
-    .contact-box {
-      background: linear-gradient(135deg, rgba(124,109,250,0.1), rgba(192,132,252,0.05));
-      border: 1px solid var(--border); border-radius: 24px; padding: 64px;
-      display: flex; align-items: center; justify-content: space-between; gap: 40px;
-      position: relative; overflow: hidden;
-    }
-    .contact-box::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(circle at 70% 50%, rgba(124,109,250,0.08), transparent 60%);
-      pointer-events: none;
-    }
-    .contact-content h2 { font-family: var(--font-display); font-size: 2rem; font-weight: 800; margin: 8px 0; }
-    .contact-content p { color: var(--text2); }
-    .contact-actions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
-
-    /* Footer */
-    .footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 28px 0; }
-    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
-    .footer p { color: var(--text2); font-size: 0.85rem; }
-    .back-top {
-      width: 40px; height: 40px; border-radius: 50%;
-      background: var(--bg3); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--text2); text-decoration: none; transition: all 0.2s;
-    }
-    .back-top:hover { color: var(--accent); border-color: var(--accent); }
-
-    /* Animations */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    @media (max-width: 900px) {
-      .hero { flex-direction: column; text-align: center; padding-top: 100px; }
-      .hero-actions, .hero-social { justify-content: center; }
-      .hero-visual { display: none; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .about-grid, .projects-grid, .skills-grid, .achievements-grid, .education-grid { grid-template-columns: 1fr; }
-      .contact-box { flex-direction: column; padding: 40px 24px; text-align: center; }
-      .nav-links { display: none; flex-direction: column; gap: 8px; position: absolute; top: 64px; left: 0; right: 0; background: var(--bg2); padding: 16px 24px; border-bottom: 1px solid var(--border); }
-      .nav-links.open { display: flex; }
-      .nav-toggle { display: flex; }
-      .timeline { padding-left: 24px; }
-    }
-
-    @media (max-width: 600px) {
-      .stats { grid-template-columns: repeat(2, 1fr); }
-      .projects-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="bg-noise" aria-hidden="true"></div>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-orb orb1" aria-hidden="true"></div>
-  <div class="bg-orb orb2" aria-hidden="true"></div>
+  <div class="bg-mesh" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
   <header class="site-header" id="header">
     <nav class="nav container" aria-label="Main">
-      <a href="#home" class="nav-logo">SO<span class="accent">.</span></a>
+      <a href="#home" class="nav-logo">MK<span class="accent">.</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -417,32 +45,32 @@
       <div class="hero-content reveal">
         <p class="hero-badge"><span class="pulse"></span> Available for opportunities</p>
         <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Sumit Ojha</span>
+          Hi, I'm <span class="gradient-text">Mukesh Kumar Patel</span>
         </h1>
         <p class="hero-role">
           <span id="typedRole"></span><span class="typed-cursor">|</span>
         </p>
         <p class="hero-summary">
-          Results-driven Mobile App Developer with <strong>5+ years</strong> building production-grade
+          Results-driven Mobile App Developer with <strong>4.5+ years</strong> building production-grade
           Android & Flutter apps — <strong>50,000+ downloads</strong> and <strong>4.0+</strong> Play Store ratings.
           Kotlin, Dart, Jetpack Compose, MVVM & Clean Architecture.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-outline">
-            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+          <a href="assets/Mukesh-Kumar-Patel-CV.pdf" class="btn btn-outline" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-pdf"></i> Download CV
           </a>
         </div>
         <div class="hero-social">
-          <a href="mailto:sumitojha264@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://www.linkedin.com/in/sumit-ojha-dev" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://github.com/Sumit-Dev-07" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="tel:+919009353690" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="mailto:kumarmukeshpatel57@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/mukesh-kumar-dev" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/mukeshkumar7470" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="tel:+917803994667" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
         </div>
       </div>
       <div class="hero-visual reveal" data-delay="150">
         <div class="profile-ring">
-          <div class="profile-placeholder">SO</div>
+          <img src="https://avatars.githubusercontent.com/u/48297190?v=4" alt="Mukesh Kumar Patel" width="280" height="280" class="profile-img" id="profileImg">
         </div>
         <div class="floating-card card-1">
           <i class="fa-brands fa-android"></i>
@@ -462,7 +90,7 @@
     <!-- Stats -->
     <section class="stats container reveal">
       <div class="stat-card">
-        <span class="stat-value">5+</span>
+        <span class="stat-value">4.5+</span>
         <span class="stat-label">Years Experience</span>
       </div>
       <div class="stat-card">
@@ -483,37 +111,37 @@
     <section id="about" class="section container">
       <div class="section-header reveal">
         <span class="section-tag">About Me</span>
-        <h2>Building apps that scale &amp; delight users</h2>
+        <h2>Building apps that scale & delight users</h2>
       </div>
       <div class="about-grid reveal">
         <div class="about-text">
           <p>
-            I'm a Mobile App Developer based in <strong>Indore, Madhya Pradesh</strong>, specializing in
+            I'm a Mobile App Developer based in <strong>Bhopal, Madhya Pradesh</strong>, specializing in
             high-performance <strong>Android (Kotlin)</strong> and <strong>Flutter</strong> applications.
             I architect scalable solutions using MVVM, Clean Architecture, and SOLID principles — from
-            healthcare platforms to B2B logistics marketplaces.
+            government-scale citizen services to B2B e-commerce platforms.
           </p>
           <p>
             I've integrated payment gateways (Razorpay, PhonePe), real-time chat (Socket.IO), Firebase
-            ecosystems, and managed end-to-end Play Store & App Store publishing. I'm actively expanding into
+            ecosystems, and led end-to-end Play Store & App Store publishing. I'm actively expanding into
             unit/widget testing and CI/CD pipelines.
           </p>
           <ul class="about-highlights">
-            <li><i class="fa-solid fa-location-dot"></i> Indore, MP, India</li>
-            <li><i class="fa-solid fa-envelope"></i> sumitojha264@gmail.com</li>
-            <li><i class="fa-solid fa-phone"></i> +91 9009353690</li>
+            <li><i class="fa-solid fa-location-dot"></i> Bhopal, MP, India</li>
+            <li><i class="fa-solid fa-envelope"></i> kumarmukeshpatel57@gmail.com</li>
+            <li><i class="fa-solid fa-phone"></i> +91 7803994667</li>
           </ul>
         </div>
         <div class="about-cards">
           <div class="info-card">
             <i class="fa-solid fa-layer-group"></i>
             <h3>Architecture</h3>
-            <p>MVVM, Clean Architecture, BLoC, GetX, Repository Pattern</p>
+            <p>MVVM, Clean Architecture, BLoC, Repository Pattern</p>
           </div>
           <div class="info-card">
             <i class="fa-solid fa-cloud"></i>
             <h3>Backend & Cloud</h3>
-            <p>REST APIs, Firebase, Socket.IO, FCM, Crashlytics</p>
+            <p>REST APIs, Firebase, Socket.IO, FCM</p>
           </div>
           <div class="info-card">
             <i class="fa-solid fa-store"></i>
@@ -536,15 +164,14 @@
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-meta">
-                <span class="timeline-date">May 2023 — Present</span>
-                <span class="timeline-location">Indore, MP</span>
+                <span class="timeline-date">Apr 2025 — Present</span>
+                <span class="timeline-location">Bhopal, MP</span>
               </div>
-              <h3>Mobile App Developer (Android | Flutter)</h3>
-              <p class="timeline-company">HEXALITICS TECHNOLOGY PVT. LTD.</p>
+              <h3>Mobile App Developer (Flutter)</h3>
+              <p class="timeline-company">NETLINK SOFTWARE PVT. LTD.</p>
               <ul>
-                <li>Built high-performance cross-platform Flutter apps; improved user engagement ~25% via optimized UI rendering and smooth GetX/BLoC state management.</li>
-                <li>Integrated REST APIs using HTTP and Dio with error handling, retry logic, and response caching.</li>
-                <li>Adopted BLoC pattern across the codebase, improving responsiveness ~25% and making features easier to test and maintain.</li>
+                <li>Built high-performance cross-platform Flutter apps; improved engagement ~25% via optimized UI and BLoC state management.</li>
+                <li>Integrated REST APIs (http, dio) with error handling, retry logic, and response caching.</li>
                 <li>Integrated Razorpay & PhonePe with secure callbacks and failure recovery flows.</li>
                 <li>Managed end-to-end publishing on Google Play Store and Apple App Store.</li>
               </ul>
@@ -555,18 +182,33 @@
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-meta">
-                <span class="timeline-date">May 2021 — Apr 2023</span>
+                <span class="timeline-date">Nov 2022 — Apr 2025</span>
                 <span class="timeline-location">Indore, MP</span>
               </div>
-              <h3>Android Developer</h3>
-              <p class="timeline-company">HEXALITICS TECHNOLOGY PVT. LTD.</p>
+              <h3>Mobile App Developer (Android / Flutter)</h3>
+              <p class="timeline-company">DIRECT (SHOPKIRANA) PRIVATE LIMITED</p>
               <ul>
-                <li>Engineered responsive Android apps in Kotlin and Java; migrated legacy code improving crash-free sessions and user retention.</li>
-                <li>Implemented MVVM with Dagger Hilt — reduced boilerplate ~40% with fully unit-testable ViewModels.</li>
-                <li>Built real-time chat using Socket.IO for seamless user communication.</li>
-                <li>Integrated Firebase services: FCM, OTP authentication, Crashlytics, and Dynamic Links.</li>
-                <li>Integrated Razorpay for UPI, cards, and net banking transactions.</li>
-                <li>Deployed and maintained multiple Play Store apps managing version releases and user feedback.</li>
+                <li>Engineered Android apps in Kotlin/Java; migrated legacy code improving crash-free sessions and retention.</li>
+                <li>MVVM + Dagger Hilt — reduced boilerplate ~40% with unit-testable ViewModels.</li>
+                <li>Real-time chat via Socket.IO; Firebase (FCM, OTP, Crashlytics, Dynamic Links).</li>
+                <li>Razorpay integration (UPI, cards, net banking); Play Store release management.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Aug 2021 — Nov 2022</span>
+                <span class="timeline-location">Bhopal, MP</span>
+              </div>
+              <h3>Mobile App Developer (Android)</h3>
+              <p class="timeline-company">HACKERKERNEL PRIVATE LIMITED</p>
+              <ul>
+                <li>Delivered client-facing Android apps in Java & Kotlin with clean code standards.</li>
+                <li>Retrofit API integration with auth interceptors and error state handling.</li>
+                <li>Live GPS tracking app using Google Maps SDK with battery-efficient updates.</li>
               </ul>
             </div>
           </article>
@@ -582,47 +224,47 @@
       </div>
       <div class="projects-grid">
         <article class="project-card reveal">
-          <div class="project-icon bible"><i class="fa-solid fa-book-bible"></i></div>
+          <div class="project-icon gov"><i class="fa-solid fa-landmark"></i></div>
           <div class="project-tags">
-            <span>Kotlin</span><span>MVVM</span><span>Room</span><span>FCM</span>
+            <span>Flutter</span><span>Clean Architecture</span><span>BLoC</span>
           </div>
-          <h3>The Holy Bible Living Words</h3>
-          <p class="project-type">Android App — Google Play Store</p>
-          <p>Bible reading and listening app enabling users to read scriptures, listen to audio content, and access spiritual resources.</p>
+          <h3>MP eNagarpalika</h3>
+          <p class="project-type">Government App — Madhya Pradesh</p>
+          <p>Citizen services: property tax, water tax, sewerage connections, and service status tracking at municipal scale.</p>
           <ul class="project-features">
-            <li>MVVM + Coroutines + Dagger-Hilt for maintainability</li>
-            <li>Retrofit for APIs; Room for offline storage with CRUD & migrations</li>
-            <li>FCM for real-time notifications; Trello-based sprint management</li>
+            <li>MVVM + BLoC with scalable module structure</li>
+            <li>Government backend APIs with auth tokens & caching</li>
+            <li>Play Store compliance with cross-team QA & design</li>
           </ul>
         </article>
 
         <article class="project-card reveal">
-          <div class="project-icon health"><i class="fa-solid fa-stethoscope"></i></div>
+          <div class="project-icon commerce"><i class="fa-solid fa-cart-shopping"></i></div>
           <div class="project-tags">
-            <span>Flutter</span><span>GetX</span><span>MVVM</span><span>Dio</span>
+            <span>Flutter</span><span>Provider</span><span>MVVM</span>
           </div>
-          <h3>Close Care</h3>
-          <p class="project-type">Healthcare Appointment App — Cross-platform</p>
-          <p>Patient app for discovering doctors, scheduling appointments, managing medical records, and accessing healthcare services.</p>
+          <h3>Zila</h3>
+          <p class="project-type">E-Commerce App — Cross-platform</p>
+          <p>Full-featured shopping: browse, cart, orders, wishlist, and OTP authentication.</p>
           <ul class="project-features">
-            <li>Flutter + MVVM with modular, scalable architecture</li>
-            <li>GetX for state management, DI, and routing</li>
-            <li>FCM for appointment reminders and real-time updates</li>
+            <li>Razorpay payments & FCM promotional pushes</li>
+            <li>Reusable widgets for fast Android & iOS load times</li>
+            <li>Complex checkout & recommendation flows</li>
           </ul>
         </article>
 
         <article class="project-card reveal">
-          <div class="project-icon logistics"><i class="fa-solid fa-plane-departure"></i></div>
+          <div class="project-icon b2b"><i class="fa-solid fa-truck-fast"></i></div>
           <div class="project-tags">
-            <span>Kotlin</span><span>Retrofit</span><span>Firebase</span><span>FCM</span>
+            <span>Kotlin</span><span>Room</span><span>FCM</span>
           </div>
-          <h3>Spacr</h3>
-          <p class="project-type">Logistics Marketplace — Android App</p>
-          <p>Connects shippers with flight travelers for cost-effective product transportation through mutually agreed-upon delivery offers.</p>
+          <h3>SK Agent</h3>
+          <p class="project-type">B2B Sales Android App</p>
+          <p>Sales agents manage orders, retailer requirements, and real-time delivery tracking in the field.</p>
           <ul class="project-features">
-            <li>Google Sign-In via Firebase Authentication</li>
-            <li>Retrofit for shipment creation, booking, and tracking APIs</li>
-            <li>FCM for offer responses, confirmations, and status updates</li>
+            <li>Java-to-Kotlin migration; offline cart with Room sync</li>
+            <li>COD, Pay Later & custom QR payment modes</li>
+            <li>FCM for order reminders & delivery updates</li>
           </ul>
         </article>
       </div>
@@ -639,21 +281,21 @@
           <div class="skill-group">
             <h3><i class="fa-solid fa-code"></i> Languages</h3>
             <div class="skill-tags">
-              <span>Kotlin</span><span>Core Java</span><span>Dart</span><span>XML</span>
+              <span>Kotlin</span><span>Java</span><span>Dart</span><span>XML</span>
             </div>
           </div>
           <div class="skill-group">
             <h3><i class="fa-brands fa-android"></i> Android</h3>
             <div class="skill-tags">
-              <span>Jetpack Compose</span><span>Android SDK</span><span>Dagger Hilt</span>
-              <span>Room</span><span>Retrofit</span><span>Coroutines</span><span>LiveData</span><span>StateFlow</span>
+              <span>Jetpack Compose</span><span>Dagger Hilt</span><span>Room</span>
+              <span>Retrofit</span><span>Coroutines</span><span>LiveData</span><span>StateFlow</span>
             </div>
           </div>
           <div class="skill-group">
             <h3><i class="fa-solid fa-mobile-screen"></i> Flutter</h3>
             <div class="skill-tags">
-              <span>BLoC</span><span>GetX</span><span>http</span><span>dio</span>
-              <span>go_router</span><span>flutter_local_notification</span>
+              <span>BLoC</span><span>Provider</span><span>dio</span><span>http</span>
+              <span>go_router</span><span>local notifications</span>
             </div>
           </div>
           <div class="skill-group">
@@ -667,14 +309,15 @@
             <h3><i class="fa-solid fa-fire"></i> APIs & Cloud</h3>
             <div class="skill-tags">
               <span>Firebase Auth</span><span>Firestore</span><span>FCM</span>
-              <span>Crashlytics</span><span>Deep Linking</span><span>REST APIs</span><span>Socket.IO</span>
+              <span>Crashlytics</span><span>Deep Linking</span><span>REST</span>
+              <span>Socket.IO</span><span>Mixpanel</span>
             </div>
           </div>
           <div class="skill-group">
             <h3><i class="fa-solid fa-toolbox"></i> Dev Tools</h3>
             <div class="skill-tags">
               <span>Android Studio</span><span>Git</span><span>GitHub</span>
-              <span>Bitbucket</span><span>Postman</span><span>Jira</span><span>Zoho</span><span>Figma</span><span>Gradle</span>
+              <span>Postman</span><span>Jira</span><span>Figma</span><span>Gradle</span>
             </div>
           </div>
         </div>
@@ -682,31 +325,31 @@
     </section>
 
     <!-- Achievements -->
-    <section id="achievements" class="section">
+    <section id="achievements" class="section section-alt">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-tag">Highlights</span>
-          <h2>Achievements</h2>
+      <div class="section-header reveal">
+        <span class="section-tag">Highlights</span>
+        <h2>Achievements</h2>
+      </div>
+      <div class="achievements-grid reveal">
+        <div class="achievement-card">
+          <i class="fa-solid fa-trophy"></i>
+          <p>Shipped multiple production apps with <strong>50,000+</strong> cumulative downloads and <strong>4.0+</strong> star ratings.</p>
         </div>
-        <div class="achievements-grid reveal">
-          <div class="achievement-card">
-            <i class="fa-solid fa-trophy"></i>
-            <p>Shipped multiple production apps with <strong>50,000+</strong> cumulative downloads and <strong>4.0+</strong> star ratings on Play Store.</p>
-          </div>
-          <div class="achievement-card">
-            <i class="fa-solid fa-clock"></i>
-            <p>Consistently met project timelines by effectively managing tasks, reducing lead time and ensuring <strong>on-time delivery</strong>.</p>
-          </div>
-          <div class="achievement-card">
-            <i class="fa-solid fa-thumbs-up"></i>
-            <p>Received positive client feedback for delivering <strong>scalable, user-friendly</strong> mobile apps on time, every time.</p>
-          </div>
+        <div class="achievement-card">
+          <i class="fa-solid fa-building-columns"></i>
+          <p>Delivered <strong>MP eNagarpalika</strong> government app serving citizens across Madhya Pradesh.</p>
         </div>
+        <div class="achievement-card">
+          <i class="fa-solid fa-arrows-rotate"></i>
+          <p>Led <strong>Java-to-Kotlin migration</strong> at ShopKirana across 2 production applications.</p>
+        </div>
+      </div>
       </div>
     </section>
 
     <!-- Education -->
-    <section id="education" class="section section-alt">
+    <section id="education" class="section">
       <div class="container">
         <div class="section-header reveal">
           <span class="section-tag">Background</span>
@@ -718,17 +361,27 @@
             <h3>BTech, Computer Science</h3>
             <p class="edu-school">SIRTS College, RGPV University</p>
             <p class="edu-detail">Bhopal, MP</p>
-            <p class="edu-cgpa">CGPA: 7.24</p>
           </article>
           <article class="edu-card">
             <span class="edu-year">2016 — 2019</span>
             <h3>Polytechnic, Computer Science</h3>
             <p class="edu-school">SATI College, RGPV University</p>
             <p class="edu-detail">Vidisha, MP</p>
-            <p class="edu-cgpa">CGPA: 6.80</p>
+          </article>
+          <article class="edu-card">
+            <span class="edu-year">2016</span>
+            <h3>High Secondary — Math/Science(PCM)</h3>
+            <p class="edu-school">Govt. Boys Hr. Sec. School Mandideep, MP Board</p>
+            <p class="edu-detail">Mandideep</p>
+          </article>
+          <article class="edu-card">
+            <span class="edu-year">2014</span>
+            <h3>High School</h3>
+            <p class="edu-school">Taksh Shila Vidhya Bhawan Hr. Sec. School Mandideep, MP Board</p>
+            <p class="edu-detail">Mandideep</p>
           </article>
         </div>
-        <p class="languages-note reveal"><i class="fa-solid fa-language"></i> English (Professional Working Proficiency) · Hindi (Native or Bilingual Proficiency)</p>
+        <p class="languages-note reveal"><i class="fa-solid fa-language"></i> English (Professional) · Hindi (Native)</p>
       </div>
     </section>
 
@@ -741,10 +394,10 @@
           <p>Open to mobile development roles, freelance projects, and collaborations.</p>
         </div>
         <div class="contact-actions">
-          <a href="mailto:sumitojha264@gmail.com" class="btn btn-primary btn-lg">
+          <a href="mailto:kumarmukeshpatel57@gmail.com" class="btn btn-primary btn-lg">
             <i class="fa-solid fa-paper-plane"></i> Send Email
           </a>
-          <a href="https://www.linkedin.com/in/sumit-ojha-dev" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/mukesh-kumar-dev" class="btn btn-outline btn-lg" target="_blank" rel="noopener">
             <i class="fa-brands fa-linkedin-in"></i> LinkedIn
           </a>
         </div>
@@ -754,53 +407,14 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Sumit Ojha. Crafted with passion for mobile.</p>
+      <p>&copy; <span id="year"></span> Mukesh Kumar Patel. Crafted with passion for mobile.</p>
+      <a href="interview.html" class="btn btn-primary btn-interview-prep">
+        <i class="fa-solid fa-graduation-cap"></i> Interview Prep
+      </a>
       <a href="#home" class="back-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
   </footer>
 
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Nav toggle
-    const toggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open);
-    });
-
-    // Close nav on link click
-    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-    // Typed role
-    const roles = ['Mobile App Developer', 'Android (Kotlin) Expert', 'Flutter Developer', 'MVVM Architect'];
-    let ri = 0, ci = 0, del = false;
-    const el = document.getElementById('typedRole');
-    function type() {
-      const word = roles[ri];
-      if (!del) {
-        el.textContent = word.slice(0, ++ci);
-        if (ci === word.length) { del = true; setTimeout(type, 1800); return; }
-      } else {
-        el.textContent = word.slice(0, --ci);
-        if (ci === 0) { del = false; ri = (ri + 1) % roles.length; }
-      }
-      setTimeout(type, del ? 60 : 90);
-    }
-    type();
-
-    // Scroll reveal
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-
-    // Sticky header shadow
-    window.addEventListener('scroll', () => {
-      document.getElementById('header').style.boxShadow = window.scrollY > 10 ? '0 4px 24px rgba(0,0,0,0.3)' : '';
-    });
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
